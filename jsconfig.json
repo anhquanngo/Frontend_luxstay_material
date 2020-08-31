@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./src/client",
+    "jsx": "react",
+    "paths": {
+      "@root/*": ["./*"],
+      "@shared/*": ["./shared/*"],
+      "@components/*": ["./shared/components/*"],
+      "@modules/*": ["./modules/*"],
+      "@services/*": ["./services/*"],
+      "@static/*": ["./static/*"]
+    }
+  }
+}

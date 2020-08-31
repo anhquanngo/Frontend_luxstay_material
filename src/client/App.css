@@ -1,0 +1,10 @@
+:fullscreen a {
+  display: flex;
+}
+
+::placeholder {
+  color: gray;
+}
+.image {
+  background-color: red;
+}
