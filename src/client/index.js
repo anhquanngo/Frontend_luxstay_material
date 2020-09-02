@@ -6,9 +6,9 @@ const containerRender = document.getElementById("app");
 
 containerRender
   ? ReactDOM.render(
-      <React.Fragment>
-        <App />
-      </React.Fragment>,
-      containerRender
-    )
+    <React.Fragment>
+      <App />
+    </React.Fragment>,
+    containerRender
+  )
   : console.error("Cannot find container render!!!");

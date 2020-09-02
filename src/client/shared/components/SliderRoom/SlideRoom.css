@@ -1,0 +1,8 @@
+.slick_slider_list .slider_element img {
+    width: 100%;
+    margin: 0 auto;
+    height: 300px;
+    object-fit: cover;
+    border-left: solid 2px white;
+    border-right: solid 2px white
+}

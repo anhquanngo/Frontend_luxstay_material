@@ -1,0 +1,41 @@
+
+.Selectable .DayPicker-Day--selected:not(.DayPicker-Day--start):not(.DayPicker-Day--end):not(.DayPicker-Day--outside) {
+background-color: #f0f8ff !important;
+color: #4a90e2;
+}
+.Selectable .DayPicker-Day {
+border-radius: 0 !important;
+}
+.Selectable .DayPicker-Day--start {
+border-top-left-radius: 50% !important;
+border-bottom-left-radius: 50% !important;
+}
+.Selectable .DayPicker-Day--end {
+border-top-right-radius: 50% !important;
+border-bottom-right-radius: 50% !important;
+}
+.DayPicker-Months .DayPicker-Month:first-child .DayPicker-Caption{
+    text-align: right;
+}
+.DayPicker-NavBar span:first-child{
+    left: 0;
+}
+.DayPicker-NavBar span{
+    padding: 15px 15px 15px 15px;
+    background-color: #E6E6E6;
+    border-radius: 5px;
+    color: black;
+   
+}
+
+.RangeExample{
+    position: relative;
+    width: 100%;
+    height: 80%;
+}
+button.link{
+ padding: 7px 15px 7px 15px;
+ bottom: 0;
+ right:0;
+ position: absolute;
+ }
