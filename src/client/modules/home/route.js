@@ -34,6 +34,11 @@ export default {
       component: Room,
     },
     {
+      path: "showproduct",
+      exact: true,
+      component: ShowProducts,
+    },
+    {
       path: "404",
       exact: true,
       component: NotFound,

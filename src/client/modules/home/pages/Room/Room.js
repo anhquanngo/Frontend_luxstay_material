@@ -5,8 +5,12 @@ import Breadcrumb from '@components/Breadcrumb/Breadcrumb'
 import CloudUploadIcon from '@material-ui/icons/CloudUpload';
 import { makeStyles } from '@material-ui/core/styles';
 import { Container, Paper, Grid, Typography, Button, Avatar, SvgIcon } from '@material-ui/core';
-import Transition from '@components/Transition/Transition'
+import InfoRoom from '@root/shared/components/InfoRoom/InfoRoom'
 import Utilities from './Utilities'
+import PriceRoom from './priceRoom'
+import Availability from './Availability'
+import Feedback from './Feedback'
+import Booking from './Booking'
 
 const useStyles = makeStyles((theme) => ({
     button: {
@@ -25,19 +29,10 @@ function PositionIcon(props) {
         </SvgIcon>
     );
 }
-function BuldingIcon(props) {
-    return (
-        <SvgIcon style={{ marginRight: 5 }} {...props}>
-            <path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z" />
-        </SvgIcon>
-    );
-}
 
 function room(props) {
     const classes = useStyles();
-    const handleClick = () => {
-        console.log("da click");
-    }
+
     return (
         <div>
             <Header2 />
@@ -46,37 +41,11 @@ function room(props) {
                 <Grid container spacing={3} style={{ marginTop: 10 }}>
                     <Grid item xs={8}>
                         <Breadcrumb />
-                        <div style={{ display: 'flex' }}>
-                            <Typography variant="h4" gutterBottom>
-                                Stay&Fun No.4 - Căn hộ 60m2 view cực đẹp, cách mọi điểm du lịch 5 phút đi bộ
-                            </Typography>
-                            <Avatar alt="Avatar" src="https://material-ui.com/static/images/avatar/3.jpg" className={classes.large} />
-                        </div>
-                        <div>
-                            <div style={{ display: 'flex' }}>
-                                <PositionIcon fontSize="medium" />
-                                <Typography variant="subtitle1" gutterBottom>
-                                    Quận 1, Hồ Chí Minh, Vietnam
-                            </Typography>
-                                <Typography variant="subtitle1" onClick={handleClick} style={{ paddingLeft: 10 }} gutterBottom>
-                                    Xem bản đồ
-                            </Typography>
-                            </div>
-                            <div style={{ display: 'flex', alignSelf: 'center' }}>
-                                <BuldingIcon fontSize="medium" />
-                                <Typography variant="subtitle1" gutterBottom>
-                                    Căn hộ Studio ·
-                            </Typography>
-                                <Typography variant="subtitle1" onClick={handleClick} style={{ paddingLeft: 10 }} gutterBottom>
-                                    60 m2
-                            </Typography>
-                            </div>
-                        </div>
-                        <Typography variant="subtitle1" gutterBottom>
-                            Nguyên căn · 1 Phòng tắm · 2 giường · 1 phòng ngủ · 2 khách (tối đa 5 khách)
-                            </Typography>
-                        <Transition />
+                        <InfoRoom />
                         <Utilities />
+                        <PriceRoom />
+                        <Availability />
+                        <Feedback />
                     </Grid>
                     <Grid item xs={4}>
                         <Button
@@ -85,8 +54,8 @@ function room(props) {
                             className={classes.button}
                             startIcon={<CloudUploadIcon />}
                         >
-                            Upload
-      </Button>
+                            Upload</Button>
+                        <Booking />
                     </Grid>
                 </Grid>
             </Container>
